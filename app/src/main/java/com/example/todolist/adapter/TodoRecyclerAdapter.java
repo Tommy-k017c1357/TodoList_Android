@@ -50,7 +50,7 @@ public class TodoRecyclerAdapter extends RecyclerView.Adapter<TodoRecyclerAdapte
         holder.todoId = todoModel.getTodoId();
         holder.checkBox.setChecked(todoModel.getIsComplete());
         holder.textView.setText(todoModel.getTodo());
-        SimpleDateFormat sdf = new SimpleDateFormat("作成日：MM月dd日 HH時mm分ss秒");
+        SimpleDateFormat sdf = new SimpleDateFormat("作成日：yyyy年MM月dd日 HH時mm分ss秒");
         holder.dateTextView.setText(sdf.format(todoModel.getCreated()));
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
